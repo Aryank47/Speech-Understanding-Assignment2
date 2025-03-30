@@ -70,9 +70,7 @@ Below is a suggested directory structure. You can adapt as needed:
 
 3. **Run the Script**
 
-   ```bash
-   python code1_speaker_verification_sepformer.py
-   ```
+   Run q1.ipynb using VScode or any other editor of choice
 
    The script will:
 
@@ -96,12 +94,6 @@ Below is a suggested directory structure. You can adapt as needed:
 - **GPU Usage**: If you have CUDA enabled, the code will detect and run on GPU. Otherwise, it may be slow on CPU.
 - **Memory**: The code calls garbage collection and CUDA memory clearing frequently to handle large waveforms.
 - **Parameter Tuning**: You can adjust hyperparameters like `r=4`, `alpha=1.0` in the LoRA function, or `margin=0.5`, `scale=64` in ArcFace, as well as `lr=1e-4`.
-
-## Possible Extensions
-
-- Use more advanced sampling or trimming strategies.
-- Integrate additional loss functions for multi-task learning.
-- Experiment with different pre-trained transformer-based audio models (e.g., Hubert, wav2vec2).
 
 ---
 
@@ -171,9 +163,7 @@ pip install torch torchaudio numpy matplotlib scikit-learn seaborn joblib
 
 3. **Run the Script**
 
-   ```bash
-   python code2_language_detection.py
-   ```
+   Run q2.ipynb using VScode or any other editor of choice
 
    The script will:
 
@@ -198,17 +188,3 @@ pip install torch torchaudio numpy matplotlib scikit-learn seaborn joblib
 - **hidden_dim = 225**: Hidden layer dimension in the feedforward network.
 - **learning_rate = 1e-4**: Training learning rate.
 - **NUM_EPOCHS = 50**: Max training epochs (early stopping may stop earlier).
-
-You can modify these in the script to tune performance.
-
-## Potential Pitfalls
-
-- Insufficient data for certain languages may cause imbalance in training.
-- Audio files that fail to load or have corrupt audio frames will be skipped (the code prints warnings if so).
-- If you have `.wav` files instead of `.mp3`, adapt the code or rename the extension checks.
-
-## Extensions
-
-- Use more sophisticated architectures (CNN/RNN/Transformers) instead of the feedforward network.
-- Incorporate data augmentation (noise addition, random speed changes).
-- Fine-tune a pre-trained model such as Wav2Vec2, HuBERT, or WavLM for language ID.
