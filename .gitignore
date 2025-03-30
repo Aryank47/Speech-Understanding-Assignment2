@@ -2,3 +2,6 @@ vox1/
 vox2/
 Language Detection Dataset/
 *.pt
+*.zip
+*.tar.gz
+M23CSA510_PA2/
